@@ -21,7 +21,7 @@ li {
 
 .section {
     width: 100%;
-    min-height: 90vh;
+    min-height: 91vh;
     background-repeat: no-repeat;
     background-color: #272b36;
     display: flex;
@@ -73,7 +73,7 @@ li {
     margin: auto;
     background-color: #2f3340;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 24px;
     gap: 15px;
 }
 
@@ -90,7 +90,9 @@ li {
     color: #86d689;
 }
 
-.container p {
+.container p,
+a,
+i {
     color: #aaabb1;
 }
 
@@ -98,4 +100,18 @@ li {
     display: flex;
     gap: 15px;
     margin: auto;
+}
+
+.container a:hover {
+    color: #2a7ae2;
+}
+
+.container ul li a i {
+    font-size: 36px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.container ul li a i:hover {
+    transform: scale(1.2);
+    color: #86d689;
 }
