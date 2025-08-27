@@ -25,8 +25,7 @@ li {
 
 .section {
     width: 100%;
-    min-height: 91vh;
-    height: auto;
+    height: 91vh;
     background-repeat: no-repeat;
     background-color: #272b36;
     display: flex;
