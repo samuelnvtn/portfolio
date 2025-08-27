@@ -22,6 +22,7 @@ li {
 .section {
     width: 100%;
     min-height: 91vh;
+    height: auto;
     background-repeat: no-repeat;
     background-color: #272b36;
     display: flex;
@@ -70,6 +71,7 @@ li {
 
 .container {
     width: 60%;
+    height: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,12 +94,14 @@ li {
     font-size: 60px;
     margin: auto;
     color: #86d689;
+    text-align: center;
 }
 
 .container p,
 a,
 i {
     color: #aaabb1;
+    text-align: center;
 }
 
 .container ul {
