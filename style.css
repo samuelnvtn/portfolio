@@ -25,7 +25,7 @@ li {
 
 .section {
     width: 100%;
-    height: 91vh;
+    min-height: 91vh;
     background-repeat: no-repeat;
     background-color: #272b36;
     display: flex;
@@ -84,6 +84,13 @@ li {
     padding: 20px;
     border-radius: 24px;
     gap: 15px;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    border: 2px solid #3e4352;
+}
+
+.container:hover {
+    transform: scale(1.05);
+    border-color: #86d689;
 }
 
 .container img {
@@ -127,6 +134,103 @@ i {
     color: #86d689;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.section-school {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #272b36;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    padding: 50px 0;
+}
+
+.section-school h1 {
+    color: #ffffff;
+}
+
+.timeline {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 6px;
+    background: #3e4352;
+    transform: translateY(-50%);
+}
+
+.timeline-dot {
+    position: absolute;
+    top: 50%;
+    width: 20px;
+    height: 20px;
+    background: #86d689;
+    border: 4px solid #2f3340;
+    border-radius: 50%;
+    transform: translateY(-50%);
+}
+
+.dot-ss {
+    left: 37%;
+}
+
+.dot-vs {
+    right: 37%;
+}
+
+.school-card {
+    background-color: #2f3340;
+    border-radius: 20px;
+    padding: 20px 30px;
+    color: #aaabb1;
+    border: 2px solid #3e4352;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    max-width: 450px;
+}
+
+.school-card h3 {
+    color: #86d689;
+    margin-bottom: 10px;
+}
+
+.school-card:hover {
+    transform: scale(1.05);
+    border-color: #86d689;
+}
+
+.school-card p,
+i {
+    margin: 5px 0;
+    font-size: large;
+}
+
+.school-card img {
+    border-radius: 10px;
+}
+
+.school-card #mend {
+    filter: grayscale(100);
+}
+
+.container-school,
+.container-uni {
+    width: 60%;
+    display: flex;
+    margin: 40px auto; /* místo height dej margin */
+}
+
+.container-school {
+    justify-content: flex-start;
+}
+
+.container-uni {
+    justify-content: flex-end;
+}
+
 @media (max-width: 768px) {
     .section {
         width: 100%;
@@ -145,9 +249,12 @@ i {
     .container h1 {
         font-size: 50px;
     }
-}
 
-img {
-    max-width: 100%;
-    height: auto;
+    .dot-ss {
+        left: 50%;
+    }
+
+    .dot-vs {
+        display: none;
+    }
 }
