@@ -220,7 +220,7 @@ i {
 .container-uni {
     width: 60%;
     display: flex;
-    margin: 40px auto; /* místo height dej margin */
+    margin: 40px auto;
 }
 
 .container-school {
@@ -250,11 +250,21 @@ i {
         font-size: 50px;
     }
 
+    .timeline {
+        display: none;
+    }
+
+    .timeline-dot {
+        display: none;
+    }
+
     .dot-ss {
-        left: 50%;
+        display: none;
     }
 
     .dot-vs {
         display: none;
     }
+
+    /*TODO: MOBILNI VERZE TIMELINE*/
 }
