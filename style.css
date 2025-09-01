@@ -139,6 +139,21 @@ img {
     height: auto;
 }
 
+.stack {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.stack i {
+    font-size: 47px;
+    filter: grayscale(100);
+}
+
+.stack i:hover {
+    filter: none;
+}
+
 .section-school {
     width: 100%;
     min-height: 100vh;
@@ -248,6 +263,10 @@ i {
 
     .container h1 {
         font-size: 50px;
+    }
+
+    .stack i {
+        font-size: 40px;
     }
 
     .timeline {
