@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Take Your Meds! <3</title>
+    </head>
+    <body>
+        <div class="site">
+            <h1 id="quest">Vzala sis prášek?</h1>
+            <img id="pic" src="" alt="" />
+            <button id="button" onclick="takeMeds()"><p>ANO!</p></button>
+        </div>
+    </body>
+</html>
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        background-color: rgb(9, 9, 9);
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    .site {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 100vh;
+        gap: 35px;
+        justify-content: center;
+    }
+
+    #pic {
+        height: 250px;
+        object-fit: cover;
+        border-radius: 20px;
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+    }
+
+    #button {
+        background-color: blueviolet;
+        border-radius: 10px;
+        border: none;
+        padding: 10px 30px;
+    }
+
+    #button:active {
+        transform: scale(0.95);
+        background-color: #7022b5;
+    }
+
+    #button p {
+        color: white;
+        font-size: 20px;
+    }
+
+    h1 {
+        color: white;
+    }
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+<script>
+    const seznamObrazku = ["obrazky/meds1.jpg", "obrazky/meds2.jpg", "obrazky/meds3.jpg", "obrazky/meds4.gif"]
+
+    function zmenObrazek() {
+        // Získáme HTML prvek img podle ID
+        const imgPrvek = document.getElementById("pic")
+
+        // Náhodné číslo od 0 do počtu obrázků v seznamu
+        const nahodnyIndex = Math.floor(Math.random() * seznamObrazku.length)
+
+        // Vybereme konkrétní cestu z pole
+        const vybranaCesta = seznamObrazku[nahodnyIndex]
+
+        // Nastavíme atribut 'src' obrázku na vybranou cestu
+        imgPrvek.src = vybranaCesta
+    }
+
+    zmenObrazek()
+
+    function takeMeds() {
+        confetti()
+
+        document.getElementById("quest").innerText = "Jsi nejlepší! ❤️"
+    }
+</script>
